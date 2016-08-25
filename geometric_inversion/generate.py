@@ -12,7 +12,7 @@ from math import sqrt
 
 width, height = (1280, 720)
 radius = 100
-frames = 150
+frames = 300
 
 # Store the intermediate results in a buffer.
 buffer = [[(0,0,0) for y in range(height)] for x in range(width)]
@@ -26,8 +26,8 @@ def invert(x, y):
   return (x*factor, y*factor)
 
 for frame in range(frames):
-  # Animate the radius.
-  radius = 10 + frame
+  # Animate the radius up to 90.
+  radius = min(90, 10 + frame)
   
   for pixel_y in range(height):
     y = pixel_y - int(height/2)
