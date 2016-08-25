@@ -55,5 +55,3 @@ for frame in range(frames):
     for y in range(height):
       image.putpixel((x, y), buffer[x][y])
   image.save('frames/img{0:03d}.png'.format(frame))
-  
-  
