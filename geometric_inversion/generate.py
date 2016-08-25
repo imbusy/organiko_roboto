@@ -12,7 +12,7 @@ from math import sqrt
 
 width, height = (1280, 720)
 radius = 100
-frames = 300
+frames = 200
 
 # Store the intermediate results in a buffer.
 buffer = [[(0,0,0) for y in range(height)] for x in range(width)]

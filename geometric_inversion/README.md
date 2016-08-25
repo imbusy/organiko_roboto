@@ -13,6 +13,6 @@ Written for readability, not performance. To generate the frames, type:
 Frames are writen to the `frames/` directory. The output was used to generate a video using
 ffmpeg command:
 
-    ffmpeg -framerate 25 -i frames/img%03d.png -c:v mpeg4 -qscale:v 6 geometric_inversion.mp4
+    ffmpeg -framerate 25 -i frames/img%03d.png -c:v libx264 -preset slow -crf 20 -pix_fmt yuv420p geometric_inversion.mp4
 
 Tested using Python 3.5 and requires the Pillow library.
